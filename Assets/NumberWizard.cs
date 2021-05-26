@@ -32,6 +32,8 @@ public class NumberWizard : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             Debug.Log("Down Arrow key was pressed.");
+            max = guess;
+            Debug.Log(guess);
         }
         //Detect when the Return key is pressed down
         else if (Input.GetKeyDown(KeyCode.Return))
