@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class NumberWizard : MonoBehaviour
 {
@@ -37,5 +35,6 @@ public class NumberWizard : MonoBehaviour
             Debug.Log("Return key was pressed.");
         }
         // Read documentation: https://docs.unity3d.com/ScriptReference/Input.html
+        // Fixed intellisense not working on unity through source: https://forum.unity.com/threads/intellisense-not-working-with-visual-studio-fix.836599/
     }
 }
