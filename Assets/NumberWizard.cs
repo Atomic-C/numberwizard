@@ -14,8 +14,9 @@ public class NumberWizard : MonoBehaviour
         Debug.Log("Please pick a number.");
         Debug.Log("The highest numeber you can chose is: " + max);
         Debug.Log("The lowest number you can chose is: " + min);
-        Debug.Log("Tell me if your number is higher or lower than 500");
+        Debug.Log("Tell me if your number is higher or lower than " + guess);
         Debug.Log("Push Up = Higher, Push Down = Lower, Push Enter = Correct");
+        max = max + 1;
     }
 
     // Update is called once per frame
@@ -24,18 +25,18 @@ public class NumberWizard : MonoBehaviour
         //Detect when the up arrow key is pressed down
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            Debug.Log("Up Arrow key was pressed.");
+            Debug.Log("So it's Higher? is it...");
             min = guess;
             guess = ((max + min) / 2);
-            Debug.Log(guess);
+            Debug.Log(guess + " perhaps?");
         }
         //Detect when the down arrow key is pressed down
         else if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            Debug.Log("Down Arrow key was pressed.");
+            Debug.Log("So it's Lower? is it...");
             max = guess;
             guess = ((max + min) / 2);
-            Debug.Log(guess);
+            Debug.Log(guess + " perhaps?");
         }
         //Detect when the Return key is pressed down
         else if (Input.GetKeyDown(KeyCode.Return))
