@@ -30,18 +30,12 @@ public class NumberWizard : MonoBehaviour
         //Detect when the up arrow key is pressed down
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            Debug.Log("So it's Higher? is it...");
-            min = guess;
-            guess = ((max + min) / 2);
-            Debug.Log(guess + " perhaps?");
+            NextGuess();
         }
         //Detect when the down arrow key is pressed down
         else if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            Debug.Log("So it's Lower? is it...");
-            max = guess;
-            guess = ((max + min) / 2);
-            Debug.Log(guess + " perhaps?");
+            NextGuess();
         }
         //Detect when the Return key is pressed down
         else if (Input.GetKeyDown(KeyCode.Return))
@@ -50,5 +44,11 @@ public class NumberWizard : MonoBehaviour
         }
         // Read documentation: https://docs.unity3d.com/ScriptReference/Input.html
         // Fixed intellisense not working on unity through source: https://forum.unity.com/threads/intellisense-not-working-with-visual-studio-fix.836599/
+    }
+    void NextGuess()
+    {
+        min = guess;
+        guess = ((max + min) / 2);
+        Debug.Log("So it's Higher or Lower than... " + guess + "?");
     }
 }
