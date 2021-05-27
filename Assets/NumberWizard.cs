@@ -9,7 +9,11 @@ public class NumberWizard : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        StartGame();
+    }
 
+    void StartGame()
+    {
         Debug.Log("Welcome to number wizard!");
         Debug.Log("Please pick a number.");
         Debug.Log("The highest numeber you can chose is: " + max);
@@ -17,6 +21,7 @@ public class NumberWizard : MonoBehaviour
         Debug.Log("Tell me if your number is higher or lower than " + guess);
         Debug.Log("Push Up = Higher, Push Down = Lower, Push Enter = Correct");
         max = max + 1;
+
     }
 
     // Update is called once per frame
