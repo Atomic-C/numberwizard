@@ -30,11 +30,13 @@ public class NumberWizard : MonoBehaviour
         //Detect when the up arrow key is pressed down
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
+            min = guess;
             NextGuess();
         }
         //Detect when the down arrow key is pressed down
         else if (Input.GetKeyDown(KeyCode.DownArrow))
         {
+            max = guess;
             NextGuess();
         }
         //Detect when the Return key is pressed down
@@ -47,8 +49,7 @@ public class NumberWizard : MonoBehaviour
     }
     void NextGuess()
     {
-        min = guess;
-        guess = ((max + min) / 2);
+        guess = (max + min) / 2;
         Debug.Log("So it's Higher or Lower than... " + guess + "?");
     }
 }
